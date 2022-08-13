@@ -82,15 +82,15 @@ export const projects: Project[] = [
     logo: "/images/projects/rtg.svg",
     platforms: [
       {
-        name: "iOS",
-        icon: "/images/icons/apple.png",
+        name: "Web",
+        icon: "/images/icons/web.png",
       },
       {
-        name: "Firebase",
+        name: "Backend",
         icon: "/images/icons/backend.png",
       },
     ],
-    tech: ["React", "React Native", "Expo", "TypeScript", "Firestore"],
+    tech: ["Python", "Flask", "AWS"],
     tags: ["Data Processing"],
   },
   {
