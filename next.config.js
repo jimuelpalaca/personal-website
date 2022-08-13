@@ -1,7 +1,6 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-  swcMinify: true,
-}
-
-module.exports = nextConfig
+const withNextra = require("nextra")({
+  theme: "nextra-theme-blog",
+  themeConfig: "./theme.config.js",
+  // optional: add `unstable_staticImage: true` to enable Nextra's auto image import
+})
+module.exports = withNextra()
