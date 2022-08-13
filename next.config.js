@@ -1,6 +1,43 @@
 const withNextra = require("nextra")({
   theme: "nextra-theme-blog",
   themeConfig: "./theme.config.js",
-  // optional: add `unstable_staticImage: true` to enable Nextra's auto image import
 })
-module.exports = withNextra()
+module.exports = withNextra({
+  async headers() {
+    return [
+      {
+        source: "/(.*)",
+        headers: [
+          {
+            key: "Content-Security-Policy",
+            value: "upgrade-insecure-requests",
+          },
+          {
+            key: "Strict-Transport-Security",
+            value: "max-age=2592000;includeSubdomains",
+          },
+          {
+            key: "X-Xss-Protection",
+            value: "1; mode=block",
+          },
+          {
+            key: "X-Frame-Options",
+            value: "DENY",
+          },
+          {
+            key: "X-Content-Type-Options",
+            value: "nosniff",
+          },
+          {
+            key: "Referrer-Policy",
+            value: "strict-origin-when-cross-origin",
+          },
+          {
+            key: "Permissions-Policy",
+            value: "geolocation=(self)",
+          },
+        ],
+      },
+    ]
+  },
+})
