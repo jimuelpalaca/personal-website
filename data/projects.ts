@@ -1,13 +1,87 @@
-import { Project } from "../screens/projects"
+import { Project } from "../screens/projects";
 
 export const projects: Project[] = [
+  {
+    title: "Savage X Fenty Website",
+    role: "Software Engineer",
+    company: "Savage X Fenty by Rihanna",
+    description:
+      "Savage X Fenty is a lingerie brand founded by Barbadian singer Rihanna. Along with lingerie, the line features bras, underwear, sleepwear, and loungewear. We sell underwears!",
+    involvement: "API Support",
+    date: "October 2022 - present",
+    logo: "/images/projects/savage.png",
+    platforms: [
+      {
+        name: "Web",
+        icon: "/images/icons/web.png",
+      },
+      {
+        name: "API",
+        icon: "/images/icons/backend.png",
+      },
+    ],
+    tech: ["NodeJS", "TypeScript", "NestJS", "Coldfusion"],
+    tags: ["E-commerce"],
+  },
+  {
+    title: "Japanese: The Game",
+    role: "Mobile Developer",
+    company: "Nuclius LLC.",
+    description:
+      "Japanese: The Game is a language-learning card game. The cards in the game each have a Japanese word on the obverse. Players use these cards to build melds following a color pattern that forces the melds to be grammatically correct Japanese sentences.",
+    involvement: "from start to production",
+    date: "November 2022",
+    logo: "/images/projects/jtg.png",
+    platforms: [
+      {
+        name: "iOS",
+        icon: "/images/icons/apple.png",
+      },
+      {
+        name: "Android",
+        icon: "/images/icons/android.png",
+      },
+      {
+        name: "Firebase",
+        icon: "/images/icons/backend.png",
+      },
+    ],
+    tech: ["React", "React Native", "TypeScript", "Firestore"],
+    tags: ["Card Game", "Culture", "Language"],
+  },
+  {
+    title: "CanYou",
+    role: "Mobile Developer",
+    company: "Nuclius LLC.",
+    description:
+      "CanYou is a react native app aiming to help one-to-one task management for personal/business use.",
+    involvement: "support to production",
+    date: "October 2022 - December 2022",
+    logo: "/images/projects/canyou.png",
+    platforms: [
+      {
+        name: "iOS",
+        icon: "/images/icons/apple.png",
+      },
+      {
+        name: "Android",
+        icon: "/images/icons/android.png",
+      },
+      {
+        name: "Firebase",
+        icon: "/images/icons/backend.png",
+      },
+    ],
+    tech: ["React", "React Native", "TypeScript", "Firestore"],
+    tags: ["Social Media", "Mental Health"],
+  },
   {
     title: "BridgeMe",
     role: "Mobile Developer",
     company: "Tappollo Media LLC.",
     description:
       "Bridge is an iOS app aiming to help solve loneliness by creating an activity-based concierge app that helps similar like-minded/life-stage individuals find each other",
-    involvement: "support to UAT",
+    involvement: "from start to UAT",
     date: "April 2022 - ongoing",
     logo: "/images/projects/bridge.png",
     platforms: [
@@ -25,11 +99,11 @@ export const projects: Project[] = [
   },
   {
     title: "Threemata",
-    role: "Web Developer",
+    role: "Lead Developer",
     company: "Tappollo Media LLC.",
     description:
       "Threemata allows property owners host a virtual live tour of the property.",
-    involvement: "support to UAT",
+    involvement: "from start to UAT",
     date: "March 2022 - August 2022",
     logo: "/images/projects/threemata.svg",
     platforms: [
@@ -51,7 +125,7 @@ export const projects: Project[] = [
     company: "Tappollo Media LLC.",
     description:
       "RTG LMS App was supposedly a learning app that would help RTG's employees to adapt to the business quickly.",
-    involvement: "support to Production",
+    involvement: "from start to UAT (project got postponed)",
     date: "November 2021 - April 2022",
     logo: "/images/projects/lms.svg",
     platforms: [
@@ -77,7 +151,7 @@ export const projects: Project[] = [
     company: "Tappollo Media LLC.",
     description:
       "RTG Data Warehouse is a python scripts that is responsible for processing and backing up data from different physical stores.",
-    involvement: "support to Production",
+    involvement: "from start to Production",
     date: "November 2021 - April 2022",
     logo: "/images/projects/rtg.svg",
     platforms: [
@@ -143,7 +217,7 @@ export const projects: Project[] = [
     company: "White Cloak Techonologies, Inc.",
     description:
       "Splurge is an NFT based social network platform that rewards content creators through the user-driven economy.",
-    involvement: "from start to UAT",
+    involvement: "from start to Production",
     date: "March 2021 - December 2021",
     logo: "/images/projects/splurge.png",
     platforms: [
@@ -221,7 +295,7 @@ export const projects: Project[] = [
     company: "White Cloak Techonologies, Inc.",
     description:
       "Ayala Land, Inc. is the largest property developer in the Philippines. We created a multi-tenant CMS for their subsidiaries and affliates websites.",
-    involvement: "from start to UAT",
+    involvement: "from start to Production",
     date: "June 2020 - December 2020",
     logo: "/images/projects/ayala.png",
     platforms: [
@@ -668,4 +742,4 @@ export const projects: Project[] = [
     tech: ["Laravel", "MySQL", "JQuery"],
     tags: ["Bundy", "Internal"],
   },
-]
+];

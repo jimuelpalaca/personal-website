@@ -1,23 +1,23 @@
-import { FC, useCallback, useMemo, useState } from "react"
-import { projects as dataProjects } from "data/projects"
-import ProjectContent from "./content"
+import { FC, useCallback, useMemo, useState } from "react";
+import { projects as dataProjects } from "data/projects";
+import ProjectContent from "./content";
 
 const Projects: FC = () => {
-  const [index, setIndex] = useState<number>(0)
-  const projects = useMemo(() => dataProjects, [])
-  const selectedProject = useMemo(() => projects[index], [projects, index])
+  const [index, setIndex] = useState<number>(0);
+  const projects = useMemo(() => dataProjects, []);
+  const selectedProject = useMemo(() => projects[index], [projects, index]);
 
   const handleNext = useCallback(() => {
     if (index + 1 < projects.length) {
-      setIndex(index + 1)
+      setIndex(index + 1);
     }
-  }, [index])
+  }, [index]);
 
   const handlePrevious = useCallback(() => {
     if (index) {
-      setIndex(index - 1)
+      setIndex(index - 1);
     }
-  }, [index])
+  }, [index]);
 
   return (
     <ProjectContent
@@ -27,17 +27,17 @@ const Projects: FC = () => {
       onNext={handleNext}
       onPrevious={handlePrevious}
     />
-  )
-}
+  );
+};
 
 export type Project = {
-  title: string
-  role: string
-  company: string
-  description: string
-  involvement: string
-  date: string
-  logo: string
+  title: string;
+  role: string;
+  company: string;
+  description: string;
+  involvement: string;
+  date: string;
+  logo: string;
   platforms: {
     name:
       | "Android"
@@ -47,10 +47,11 @@ export type Project = {
       | "Backend"
       | "Web CMS"
       | "Firebase"
-    icon: string
-  }[]
-  tech: string[]
-  tags: string[]
-}
+      | "API";
+    icon: string;
+  }[];
+  tech: string[];
+  tags: string[];
+};
 
-export default Projects
+export default Projects;
